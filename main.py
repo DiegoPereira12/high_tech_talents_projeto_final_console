@@ -1,13 +1,13 @@
 from os import system
+from menu import menu
+from cadastro_inquilino import Inquilino
 
 
 def main():
 
     while True:
 
-        print('-' * 30)
-        print('Bem vindo Imobiliária SanDiego')
-        print('-' * 30)
+        menu()
         print('Escolha uma opção:')
         print('1 - Cadastrar')
         print('2 - Listar')
@@ -18,6 +18,7 @@ def main():
         
         if opcao == '1':
             system('cls')
+            menu()
             print('Escolha uma opção:')
             print('1 - Cadastro Inquilino')
             print('2 - Cadastro Proprietário')
@@ -26,8 +27,8 @@ def main():
             opcao = input('=> ')
             
             if opcao == '1':
-                print('Inquilino')
-            
+                Inquilino.cadastro(Inquilino, ID='', nome='', data_nascimento='')
+
             elif opcao == '2':     
                 print('Propriétário')
             
@@ -41,7 +42,8 @@ def main():
                 print('Opção inválida! Tente novamente')
 
         elif opcao == '2':
-            pass
+            Inquilino.listar()
+            
 
         elif opcao == '3':
             pass
