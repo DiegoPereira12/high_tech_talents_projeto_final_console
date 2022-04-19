@@ -1,7 +1,5 @@
 from os import system
-from unicodedata import name
-from xml.dom.minidom import Element
-
+from time import sleep
 
 lista_inquilinos = []
 
@@ -22,8 +20,15 @@ class Inquilino(object):
     def listar(self, codigo, nome, data_nascimento):
         for inquilino in lista_inquilinos:
             codigo, nome, data_nascimento = inquilino
-            print(f'| ID: {codigo} | Nome: {nome} | Data nascimento: {data_nascimento} |')
-            
+            print(f'| ID: {codigo} | Nome: {nome} | Data nascimento: {data_nascimento} |') 
+            sleep(2)
+
+    def remove_item(lista_inquilinos,*args):
+        deletar = list(args)
+        for item in deletar:
+            while item in lista_inquilinos:
+                lista_inquilinos.remove(item)
+            return lista_inquilinos
 
     def alterar(self, codigo, nome, data_nascimento):
         print('Qual inquilino deseja alterar? Digite o Id')
@@ -33,8 +38,7 @@ class Inquilino(object):
 
             if codigo == id_inquilino:
                 print(f'| ID: {codigo} | Nome: {nome} | Data nascimento: {data_nascimento} |')
-                # remove
-                
+                remove_item(lista_inquilinos, nome, data_nascimento)
                 nome = input('Digite nome: ')
                 data_nascimento = input('Digite data nascimento: ')
                 lista_inquilinos.append((codigo, nome, data_nascimento))

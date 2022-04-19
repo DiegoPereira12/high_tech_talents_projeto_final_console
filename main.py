@@ -1,7 +1,6 @@
 from os import system
 from menu import menu
-from cadastro_inquilino import Inquilino
-
+from cadastro_inquilino import *
 
 def main():
 
