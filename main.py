@@ -28,7 +28,7 @@ def main():
             
             if opcao == '1':
             
-                Inquilino.cadastro(Inquilino, nome='', data_nascimento='')
+                Inquilino.cadastro(Inquilino, codigo='', nome='', data_nascimento='')
 
             elif opcao == '2':     
                 print('Propriétário')
@@ -43,17 +43,19 @@ def main():
                 print('Opção inválida! Tente novamente')
 
         elif opcao == '2':
-            Inquilino.listar(id)
-            
+            system('cls')
+            Inquilino.listar(Inquilino, codigo='', nome='', data_nascimento='')           
 
         elif opcao == '3':
-            pass
+            Inquilino.alterar(Inquilino, codigo='', nome='', data_nascimento='')
+            
 
         elif opcao == '4':
             pass
 
         elif opcao == '5':
             print('Fim do Sistema')
+            break
 
         else:
             print('Opção inválida! Tente novamente')
