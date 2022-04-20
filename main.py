@@ -1,33 +1,31 @@
 from os import system
-from menu import menu
-from cadastro_inquilino import *
+import menu
+from cadastro_inquilino import Inquilino
 
 def main():
 
     while True:
 
-        menu()
-        print('Escolha uma opção:')
-        print('1 - Cadastrar')
-        print('2 - Listar')
-        print('3 - Alterar')
-        print('4 - Excluir')
-        print('5 - Sair')
+        menu.cabecalho()
+        menu.menu_opcoes()
+        
         opcao = input('=> ')
         
         if opcao == '1':
             system('cls')
-            menu()
-            print('Escolha uma opção:')
-            print('1 - Cadastro Inquilino')
-            print('2 - Cadastro Proprietário')
-            print('3 - Cadastro Imóvel')
-            print('4 = Cadastro Aluguel')
+            menu.cabecalho()
+            print('Selecione uma opção:')
+            print('[1] - Cadastro Inquilino')
+            print('[2] - Cadastro Proprietário')
+            print('[3] - Cadastro Imóvel')
+            print('[4] = Cadastro Aluguel')
             opcao = input('=> ')
             
             if opcao == '1':
-            
-                Inquilino.cadastro(Inquilino, codigo='', nome='', data_nascimento='')
+                system('cls')
+                menu.cabecalho()
+                print('Cadastrando Inquilino...')
+                Inquilino.cadastro(Inquilino, codigo='', nome='', cpf='', data_nascimento='')
 
             elif opcao == '2':     
                 print('Propriétário')
@@ -39,14 +37,17 @@ def main():
                 print('Aluguel')
             
             else:
+                system('cls')
                 print('Opção inválida! Tente novamente')
 
         elif opcao == '2':
-            system('cls')
-            Inquilino.listar(Inquilino, codigo='', nome='', data_nascimento='')           
+            system('cls')            
+            print('BASE DE INQUILINOS CADASTRADOS')
+            print('-' * 31)
+            Inquilino.listar(Inquilino, codigo='', nome='', cpf='', data_nascimento='')     
 
         elif opcao == '3':
-            Inquilino.alterar(Inquilino, codigo='', nome='', data_nascimento='')
+            Inquilino.alterar(Inquilino, codigo='', nome='', cpf='', data_nascimento='')
             
 
         elif opcao == '4':
@@ -57,6 +58,7 @@ def main():
             break
 
         else:
+            system('cls')
             print('Opção inválida! Tente novamente')
         
 
