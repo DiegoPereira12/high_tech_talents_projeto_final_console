@@ -3,7 +3,7 @@ import menu
 from cadastro_inquilino import Inquilino
 
 def main():
-
+    
     while True:
 
         menu.cabecalho()
