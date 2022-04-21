@@ -1,6 +1,6 @@
 from os import system
 import menu
-from cadastro_inquilino import Inquilino
+from inquilino.cadastro_inquilino import *
 
 def main():
     
@@ -25,8 +25,8 @@ def main():
                 system('cls')
                 menu.cabecalho()
                 print('Cadastrando Inquilino...')
-                Inquilino.cadastro(Inquilino, codigo='', nome='', cpf='', data_nascimento='')
-
+                cadastro_inquilino()
+                
             elif opcao == '2':     
                 print('Propriétário')
             
@@ -41,13 +41,21 @@ def main():
                 print('Opção inválida! Tente novamente')
 
         elif opcao == '2':
-            system('cls')            
-            print('BASE DE INQUILINOS CADASTRADOS')
-            print('-' * 31)
-            Inquilino.listar(Inquilino, codigo='', nome='', cpf='', data_nascimento='')     
+            system('cls')                       
+            print('[1] - Listar Inquilinos')
+            print('[2] - Listar Imoveis')
+            print('[3] - Listar Inquilinos')
+            opcao = input('=> ')
 
+            if opcao == '1':
+                system('cls')
+                print('BASE DE INQUILINOS CADASTRADOS')
+                print('-' * 31)  
+                listar_inquilino()
+                  
         elif opcao == '3':
-            Inquilino.alterar(Inquilino, codigo='', nome='', cpf='', data_nascimento='')
+            system('cls')
+            alterar_inquilino()
             
 
         elif opcao == '4':
