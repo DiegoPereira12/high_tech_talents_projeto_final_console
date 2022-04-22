@@ -1,6 +1,10 @@
 from os import system
-import menu
+from aluguel.cadastro_aluguel import cadastro_aluguel
+from imovel.cadastro_imovel import *
 from inquilino.cadastro_inquilino import *
+from proprietario.cadastro_proprietario import *
+import menu
+
 
 def main():
     
@@ -16,9 +20,9 @@ def main():
             menu.cabecalho()
             print('Selecione uma opção:')
             print('[1] - Cadastro Inquilino')
-            print('[2] - Cadastro Proprietário')
-            print('[3] - Cadastro Imóvel')
-            print('[4] = Cadastro Aluguel')
+            print('[2] - Cadastro Imóvel')
+            print('[3] - Cadastro Proprietário')
+            print('[4] - Cadastro Aluguel')
             opcao = input('=> ')
             
             if opcao == '1':
@@ -28,30 +32,57 @@ def main():
                 cadastro_inquilino()
                 
             elif opcao == '2':     
-                print('Propriétário')
+                system('cls')
+                menu.cabecalho()
+                print('Cadastrando Imóvel...')
+                cadastro_imovel()
             
             elif opcao == '3':
-                print('Imóvel')
+                system('cls')
+                menu.cabecalho()
+                print('Cadastrando Proprietário...')
+                cadastro_properietario()
 
             elif opcao == '4':
-                print('Aluguel')
+                system('cls')
+                menu.cabecalho()
+                print('Cadastrando Aluguel...')
+                cadastro_aluguel()
             
             else:
                 system('cls')
                 print('Opção inválida! Tente novamente')
 
         elif opcao == '2':
-            system('cls')                       
+            system('cls')
+            menu.cabecalho()                       
             print('[1] - Listar Inquilinos')
             print('[2] - Listar Imoveis')
-            print('[3] - Listar Inquilinos')
+            print('[3] - Listar Proprietários')
             opcao = input('=> ')
 
             if opcao == '1':
                 system('cls')
                 print('BASE DE INQUILINOS CADASTRADOS')
-                print('-' * 31)  
+                print('-' * 32)  
                 listar_inquilino()
+            
+            elif opcao =='2':
+                system('cls')
+                print('BASE DE IMÓVEIS CADASTRADOS')
+                print('-' * 25)  
+                listar_imovel()
+
+            elif opcao =='3':
+                system('cls')
+                print('BASE DE PROPRIETÁRIOS CADASTRADOS')
+                print('-' * 33)  
+                listar_proprietario()
+            
+            else:
+                system('cls')
+                print('Opção inválida! Tente novamente')
+
                   
         elif opcao == '3':
             system('cls')
@@ -69,6 +100,5 @@ def main():
             system('cls')
             print('Opção inválida! Tente novamente')
         
-
 if __name__ == '__main__':
     main()
