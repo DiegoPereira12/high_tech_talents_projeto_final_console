@@ -1,4 +1,5 @@
 from os import system
+from time import sleep
 
 lista_proprietarios = []
 id_proprietario = []
@@ -25,6 +26,8 @@ def cadastro_properietario():
     
     lista_proprietarios.append(registro_proprietario)
     id_proprietario.append(id_inicial)
+    print('\nCadastro realizado com Sucesso!!!')
+    sleep(3)
     system('cls')
     
 def listar_proprietario():

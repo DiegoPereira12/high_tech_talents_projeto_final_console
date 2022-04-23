@@ -1,10 +1,9 @@
 from os import system
-from aluguel.cadastro_aluguel import cadastro_aluguel
 from imovel.cadastro_imovel import *
 from inquilino.cadastro_inquilino import *
 from proprietario.cadastro_proprietario import *
+from aluguel.cadastro_aluguel import *
 import menu
-
 
 def main():
     
@@ -59,6 +58,7 @@ def main():
             print('[1] - Listar Inquilinos')
             print('[2] - Listar Imoveis')
             print('[3] - Listar Proprietários')
+            print('[4] - Listar Aluguéis')
             opcao = input('=> ')
 
             if opcao == '1':
@@ -79,16 +79,20 @@ def main():
                 print('-' * 33)  
                 listar_proprietario()
             
+            elif opcao =='4':
+                system('cls')
+                print('BASE DE ALUGUÉIS CADASTRADOS')
+                print('-' * 33)  
+                listar_aluguel()
+            
             else:
                 system('cls')
                 print('Opção inválida! Tente novamente')
-
                   
         elif opcao == '3':
             system('cls')
             alterar_inquilino()
             
-
         elif opcao == '4':
             pass
 

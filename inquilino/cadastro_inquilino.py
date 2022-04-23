@@ -1,4 +1,5 @@
 from os import system
+from time import sleep
 
 lista_inquilinos = []
 id_inquilino = []
@@ -25,6 +26,8 @@ def cadastro_inquilino():
     
     lista_inquilinos.append(registro_inquilino)
     id_inquilino.append(id_inicial)
+    print('\nCadastro realizado com Sucesso!!!')
+    sleep(3)
     system('cls')
     
 def listar_inquilino():

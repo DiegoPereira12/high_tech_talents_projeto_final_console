@@ -1,3 +1,4 @@
+from time import sleep
 from inquilino.cadastro_inquilino import *
 from imovel.cadastro_imovel import *
 
@@ -13,27 +14,28 @@ def cadastro_aluguel():
     else:
         id_inicial = len(id_aluguel) + 1
     
-    idImovel = input('Digite ID do Imovel: ')
-    for idImovel in listar_imovel():
-        print(idImovel)
-        lista_aluguel.append      
-    else:
-        print('Não consta Imóvel cadastrado com este ID')
-
+    print('\nListando imóveis cadastrados')
+    listar_imovel()
+    idImovel = input('Digite ID do imóvel a ser alugado: ')
+    lista_aluguel.append    
+     
+    print('\nListando inquilinos cadastrados')
+    listar_inquilino()
     idInquilino = input('Digite ID do Inquilino: ')
-    for idInquilino in listar_inquilino():
-        lista_aluguel.append
-        print(idInquilino)
-        lista_aluguel.append
-    else:
-        print('Não consta Inquilino cadastrado com este ID')
-
+    lista_aluguel.append
+    
     registro_aluguel = {
         'ID': id_inicial,
-        'ID Imóvel': id_aluguel,
-        'ID Inquilino': id_aluguel
+        'Imóvel': idImovel,
+        'Inquilino': idInquilino
     }
 
     lista_aluguel.append(registro_aluguel)
     id_aluguel.append(id_inicial)
+    print('\nCadastro realizado com Sucesso!!!')
+    sleep(3)
     system('cls')
+
+def listar_aluguel():
+    for aluguel in lista_aluguel:
+        print(f"| ID: {aluguel['ID']}", f"| Imóvel: {aluguel['Imóvel']}", f"| Inquilino: {aluguel['Inquilino']} |\n")
