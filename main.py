@@ -94,7 +94,9 @@ def main():
             alterar_inquilino()
             
         elif opcao == '4':
-            pass
+            system('cls')
+            menu.cabecalho()
+            excluir_proprietario()
 
         elif opcao == '5':
             print('Fim do Sistema')

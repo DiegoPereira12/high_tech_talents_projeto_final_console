@@ -19,8 +19,8 @@ def cadastro_properietario():
 
     registro_proprietario = {
         'ID': id_inicial,
-        'CPF': cpf,
         'Nome': nome,
+        'CPF': cpf,    
         'Data de nascimento': data_nascimento
     }
     
@@ -31,5 +31,15 @@ def cadastro_properietario():
     system('cls')
     
 def listar_proprietario():
-    for proprieario in lista_proprietarios:
-        print(f"| ID: {proprieario['ID']}", f"| Nome: {proprieario['Nome']}", f"| CPF: {proprieario['CPF']}", f"| Data nascimento: {proprieario['Data de nascimento']} |\n")
+    for proprietario in lista_proprietarios:
+        print(f"| ID: {proprietario['ID']}", f"| Nome: {proprietario['Nome']}", f"| CPF: {proprietario['CPF']}", f"| Data nascimento: {proprietario['Data de nascimento']} |\n")
+
+def excluir_proprietario():
+    id_excluir = input('Digite o ID que deseja excluir: ')
+    print('\nListando propretários cadastrados')
+    listar_proprietario()
+
+    for proprietario1 in lista_proprietarios:
+        id_inicial, nome, cpf, data_nascimento  = proprietario1 
+        if id_inicial == id_excluir:
+            del (lista_proprietarios[:3])
