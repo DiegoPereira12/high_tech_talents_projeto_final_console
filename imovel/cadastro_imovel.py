@@ -35,5 +35,31 @@ def cadastro_imovel():
     system('cls')
 
 def listar_imovel():
-    for imovel in lista_imovel:
-        print(f"| ID: {imovel['ID']}", f"| Logradouro: {imovel['Logradouro']}", f"| CEP: {imovel['Cep']}", f"| Bairro: {imovel['Bairro']}", f"| Cidade: {imovel['Cidade']}", f"| Proprietário: {imovel['Proprietário']} |\n")
+    for imov in lista_imovel:
+        print(f"| ID: {imov['ID']}", f"| Logradouro: {imov['Logradouro']}", f"| CEP: {imov['Cep']}", f"| Bairro: {imov['Bairro']}", f"| Cidade: {imov['Cidade']}", f"| Proprietário: {imov['Proprietário']} |\n")
+
+def excluir_imovel():
+  
+    listar_imovel()
+
+    print('Digite o ID que deseja excluir')
+    opcao = input('=> ')
+    
+    for imov in lista_imovel:
+        
+        if imov['ID'] == int(opcao):
+            lista_imovel.remove(imov)
+            print('Cadastro excluido com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
+    else:
+        system('cls')
+        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        sleep(3)
+        system('cls') 
+
+# Falta desenvolver essa função
+def alterar_imovel():
+    pass
+    

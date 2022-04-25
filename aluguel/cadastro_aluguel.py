@@ -37,5 +37,31 @@ def cadastro_aluguel():
     system('cls')
 
 def listar_aluguel():
-    for aluguel in lista_aluguel:
-        print(f"| ID: {aluguel['ID']}", f"| Imóvel: {aluguel['Imóvel']}", f"| Inquilino: {aluguel['Inquilino']} |\n")
+    for alug in lista_aluguel:
+        print(f"| ID: {alug['ID']}", f"| Imóvel: {alug['Imóvel']}", f"| Inquilino: {alug['Inquilino']} |\n")
+
+
+def excluir_aluguel():
+  
+    listar_aluguel()
+
+    print('Digite o ID que deseja excluir')
+    opcao = input('=> ')
+    
+    for alug in lista_imovel:
+        
+        if alug['ID'] == int(opcao):
+            lista_aluguel.remove(alug)
+            print('Cadastro excluido com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
+    else:
+        system('cls')
+        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        sleep(3)
+        system('cls')
+
+# Falta desenvolver essa função
+def alterar_aluguel():
+    pass

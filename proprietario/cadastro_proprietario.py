@@ -56,6 +56,9 @@ def excluir_proprietario():
         sleep(3)
         system('cls')  
     
+    # Falta desenvolver essa função
+def alterar_proprietario():
+    pass
     
     
         

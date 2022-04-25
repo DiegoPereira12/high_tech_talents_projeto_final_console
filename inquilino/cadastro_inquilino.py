@@ -31,20 +31,30 @@ def cadastro_inquilino():
     system('cls')
     
 def listar_inquilino():
-    for inquilino in lista_inquilinos:
-        print(f"| ID: {inquilino['ID']}", f"| Nome: {inquilino['Nome']}", f"| CPF: {inquilino['CPF']}", f"| Data nascimento: {inquilino['Data de nascimento']} |\n")   
+    for inq in lista_inquilinos:
+        print(f"| ID: {inq['ID']}", f"| Nome: {inq['Nome']}", f"| CPF: {inq['CPF']}", f"| Data nascimento: {inq['Data de nascimento']} |\n")   
 
-def alterar_inquilino():
-    print('Qual inquilino deseja alterar? Digite o Id')
-    id_inquilino = input('Id: ')
+def excluir_inquilino():
+  
+    listar_inquilino()
 
-    if id_inquilino == 0:
-        print('Não consta inquilino cadastrado com o Id informado')
+    print('Digite o ID que deseja excluir')
+    opcao = input('=> ')
+    
+    for inq in lista_inquilinos:
+        
+        if inq['ID'] == int(opcao):
+            lista_inquilinos.remove(inq)
+            print('Cadastro excluido com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
     else:
-        listar_inquilino()
+        system('cls')
+        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        sleep(3)
+        system('cls')        
 
-        nome_1 = input('Digite nome: ')   
-        cpf_1 = input('Digite cpf: ')
-        data_nascimento_1 = input('Digite da nascimento: ')
-
-        pass
+# Falta desenvolver essa função
+def alterar_inquilino():
+    pass

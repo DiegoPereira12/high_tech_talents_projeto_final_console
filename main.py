@@ -50,7 +50,7 @@ def main():
             
             else:
                 system('cls')
-                print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
                 sleep(3)
                 system('cls')
 
@@ -89,18 +89,64 @@ def main():
             
             else:
                 system('cls')
-                print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
                 sleep(3)
                 system('cls')
-                  
+
+        # EM CONSTRUÇÃO       
         elif opcao == '3':
             system('cls')
-            alterar_inquilino()
+            menu.cabecalho()
+            print('[1] - Alterar Inquilinos')
+            print('[2] - Alterar Imoveis')
+            print('[3] - Alterar Proprietários')
+            print('[4] - Alterar Aluguéis')
+            opcao = input('=> ')
+
+            if opcao == '1':
+                alterar_inquilino()
+
+            elif opcao == '2':
+                alterar_imovel()
+
+            elif opcao =='3':
+                alterar_proprietario()
+
+            elif opcao =='4':
+                alterar_aluguel()
+
+            else:
+                system('cls')
+                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+                sleep(3)
+                system('cls')
             
         elif opcao == '4':
             system('cls')
             menu.cabecalho()
-            excluir_proprietario()
+            print('[1] - Excluir Inquilinos')
+            print('[2] - Excluir Imoveis')
+            print('[3] - Excluir Proprietários')
+            print('[4] - Excluir Aluguéis')
+            opcao = input('=> ')
+
+            if opcao == '1':
+                excluir_inquilino()
+
+            elif opcao == '2':
+                excluir_imovel()
+
+            elif opcao =='3':
+                excluir_proprietario()
+
+            elif opcao =='4':
+                excluir_aluguel()
+
+            else:
+                system('cls')
+                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+                sleep(3)
+                system('cls')
 
         elif opcao == '5':
             print('Fim do Sistema')
@@ -108,7 +154,7 @@ def main():
 
         else:
             system('cls')
-            print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+            print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
             sleep(3)
             system('cls')  
         
