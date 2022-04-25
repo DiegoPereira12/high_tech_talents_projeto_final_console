@@ -27,7 +27,7 @@ def cadastro_inquilino():
     lista_inquilinos.append(registro_inquilino)
     id_inquilino.append(id_inicial)
     print('\nCadastro realizado com Sucesso!!!')
-    sleep(3)
+    sleep(2)
     system('cls')
     
 def listar_inquilino():

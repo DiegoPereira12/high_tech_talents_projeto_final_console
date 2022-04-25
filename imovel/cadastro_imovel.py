@@ -31,7 +31,7 @@ def cadastro_imovel():
     lista_imovel.append(registro_imovel)
     id_imovel.append(id_inicial)
     print('\nCadastro realizado com Sucesso!!!')
-    sleep(3)
+    sleep(2)
     system('cls')
 
 def listar_imovel():

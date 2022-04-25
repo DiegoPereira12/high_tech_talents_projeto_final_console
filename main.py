@@ -50,7 +50,9 @@ def main():
             
             else:
                 system('cls')
-                print('Opção inválida! Tente novamente')
+                print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+                sleep(3)
+                system('cls')
 
         elif opcao == '2':
             system('cls')
@@ -87,7 +89,9 @@ def main():
             
             else:
                 system('cls')
-                print('Opção inválida! Tente novamente')
+                print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+                sleep(3)
+                system('cls')
                   
         elif opcao == '3':
             system('cls')
@@ -104,7 +108,9 @@ def main():
 
         else:
             system('cls')
-            print('Opção inválida! Tente novamente')
+            print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+            sleep(3)
+            system('cls')  
         
 if __name__ == '__main__':
     main()

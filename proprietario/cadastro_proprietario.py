@@ -27,19 +27,39 @@ def cadastro_properietario():
     lista_proprietarios.append(registro_proprietario)
     id_proprietario.append(id_inicial)
     print('\nCadastro realizado com Sucesso!!!')
-    sleep(3)
+    sleep(2)
     system('cls')
     
 def listar_proprietario():
-    for proprietario in lista_proprietarios:
-        print(f"| ID: {proprietario['ID']}", f"| Nome: {proprietario['Nome']}", f"| CPF: {proprietario['CPF']}", f"| Data nascimento: {proprietario['Data de nascimento']} |\n")
+
+    for prop in lista_proprietarios:
+        print(f"| ID: {prop['ID']}", f"| Nome: {prop['Nome']}", f"| CPF: {prop['CPF']}", f"| Data nascimento: {prop['Data de nascimento']} |\n")
 
 def excluir_proprietario():
-    id_excluir = input('Digite o ID que deseja excluir: ')
-    print('\nListando propretários cadastrados')
+  
     listar_proprietario()
 
-    for proprietario1 in lista_proprietarios:
-        id_inicial, nome, cpf, data_nascimento  = proprietario1 
-        if id_inicial == id_excluir:
-            del (lista_proprietarios[:3])
+    print('Digite o ID que deseja excluir')
+    opcao = input('=> ')
+    
+    for prop in lista_proprietarios:
+        
+        if prop['ID'] == int(opcao):
+            lista_proprietarios.remove(prop)
+            print('Cadastro excluido com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
+    else:
+        system('cls')
+        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        sleep(3)
+        system('cls')  
+    
+    
+    
+        
+        
+
+
+

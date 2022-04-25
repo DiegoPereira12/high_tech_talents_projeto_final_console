@@ -33,7 +33,7 @@ def cadastro_aluguel():
     lista_aluguel.append(registro_aluguel)
     id_aluguel.append(id_inicial)
     print('\nCadastro realizado com Sucesso!!!')
-    sleep(3)
+    sleep(2)
     system('cls')
 
 def listar_aluguel():
