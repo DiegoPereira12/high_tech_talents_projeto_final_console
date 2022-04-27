@@ -12,6 +12,6 @@ ________________________________________________________
 * Cadastrar Aluguel
 _______________________________________________________
   
-##### Linguagem utilizada: Python | HTML
+##### Linguagem utilizada: Python 🐍
 ----------------------------------------
 :house_with_garden: :houses: :hotel: :derelict_house::european_post_office::hotel:
