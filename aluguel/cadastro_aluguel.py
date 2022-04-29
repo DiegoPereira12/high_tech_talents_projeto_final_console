@@ -40,7 +40,6 @@ def listar_aluguel():
     for alug in lista_aluguel:
         print(f"| ID: {alug['ID']}", f"| Imóvel: {alug['Imóvel']}", f"| Inquilino: {alug['Inquilino']} |\n")
 
-
 def excluir_aluguel():
   
     listar_aluguel()
@@ -52,16 +51,43 @@ def excluir_aluguel():
         
         if alug['ID'] == int(opcao):
             lista_aluguel.remove(alug)
-            print('Cadastro excluido com sucesso!!!')
+            print('Cadastro excluído com sucesso!!!')
             sleep(2)
             system('cls')
             break
     else:
         system('cls')
-        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE')
         sleep(3)
         system('cls')
 
-# Falta desenvolver essa função
 def alterar_aluguel():
-    pass
+    
+    listar_aluguel()
+
+    print('Digite o ID que deseja atualizar.')
+    opcao = input('=> ')
+    
+    for alug in lista_inquilinos:
+
+        if alug['ID'] == int(opcao):
+            print('\nListando imóveis cadastrados')
+            listar_imovel()
+            novo_idImovel = input('Digite ID do imóvel a ser alugado: ')
+            alug['Imóvel'] = novo_idImovel
+
+            print('\nListando inquilinos cadastrados')
+            listar_inquilino()
+            novo_idInquilino = input('Digite ID do Inquilino: ')
+            alug['Inquilino'] = novo_idInquilino
+                  
+            print('\nCadastro atualizado com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
+
+    else:
+        system('cls')
+        print('\nOPCÃO INVÁLIDA, TENTA NOVAMENTE.')
+        sleep(3)
+        system('cls')

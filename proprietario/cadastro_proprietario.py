@@ -46,20 +46,43 @@ def excluir_proprietario():
         
         if prop['ID'] == int(opcao):
             lista_proprietarios.remove(prop)
-            print('Cadastro excluido com sucesso!!!')
+            print('Cadastro excluído com sucesso!!!')
             sleep(2)
             system('cls')
             break
     else:
         system('cls')
-        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE')
         sleep(3)
         system('cls')  
     
-    # Falta desenvolver essa função
 def alterar_proprietario():
-    pass
     
+    listar_proprietario()
+    
+    print('Digite o ID que deseja atualizar.')
+    opcao = input('=> ')
+
+    for prop in lista_proprietarios:
+
+        if prop['ID'] == int(opcao):
+            novo_nome = input('Digite nome: ')
+            prop['Nome'] = novo_nome
+            novo_cpf = input('Digite CPF: ')
+            prop['CPF'] = novo_cpf
+            novo_data_nascimento = input('Digite data nascimento: ')
+            prop['Data de nascimento'] = novo_data_nascimento
+
+            print('\nCadastro atualizado com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
+
+    else:
+        system('cls')
+        print('\nOPCÃO INVÁLIDA, TENTA NOVAMENTE.')
+        sleep(3)
+        system('cls')        
     
         
         

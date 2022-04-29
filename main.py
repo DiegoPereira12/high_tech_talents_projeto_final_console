@@ -50,7 +50,7 @@ def main():
             
             else:
                 system('cls')
-                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+                print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE!!!')
                 sleep(3)
                 system('cls')
 
@@ -89,7 +89,7 @@ def main():
             
             else:
                 system('cls')
-                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+                print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE!!!')
                 sleep(3)
                 system('cls')
 
@@ -103,29 +103,32 @@ def main():
             opcao = input('=> ')
 
             if opcao == '1':
+                system('cls')
                 print('BASE DE INQUILINOS CADASTRADOS.')
                 print('-' * 32) 
                 alterar_inquilino()
 
             elif opcao == '2':
+                system('cls')
                 print('BASE DE IMÓVEIS CADASTRADOS.')
                 print('-' * 25) 
                 alterar_imovel()
 
             elif opcao =='3':
-
-                print('BASE DE ALUGUÉIS CADASTRADOS.')
-                print('-' * 33)  
+                system('cls')
+                print('BASE DE PROPRIETÁRIOS CADASTRADOS.')
+                print('-' * 33) 
                 alterar_proprietario()
 
             elif opcao =='4':
+                system('cls')
                 print('BASE DE ALUGUÉIS CADASTRADOS.')
                 print('-' * 33) 
                 alterar_aluguel()
 
             else:
                 system('cls')
-                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+                print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE!!!')
                 sleep(3)
                 system('cls')
             
@@ -140,23 +143,31 @@ def main():
 
             if opcao == '1':
                 system('cls')
+                print('BASE DE INQUILINOS CADASTRADOS.')
+                print('-' * 32)  
                 excluir_inquilino()
 
             elif opcao == '2':
                 system('cls')
+                print('BASE DE IMÓVEIS CADASTRADOS.')
+                print('-' * 25)
                 excluir_imovel()
 
             elif opcao =='3':
                 system('cls')
+                print('BASE DE PROPRIETÁRIOS CADASTRADOS.')
+                print('-' * 33)
                 excluir_proprietario()
 
             elif opcao =='4':
                 system('cls')
+                print('BASE DE ALUGUÉIS CADASTRADOS.')
+                print('-' * 33) 
                 excluir_aluguel()
 
             else:
                 system('cls')
-                print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+                print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE!!!')
                 sleep(3)
                 system('cls')
 
@@ -166,7 +177,7 @@ def main():
 
         else:
             system('cls')
-            print('OPÇÃO INVALIDA, TENTE NOVAMENTE!!!')
+            print('OPÇÃO INVÁLIDA, TENTE NOVAMENTE!!!')
             sleep(3)
             system('cls')  
             

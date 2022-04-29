@@ -45,13 +45,13 @@ def excluir_inquilino():
         
         if inq['ID'] == int(opcao):
             lista_inquilinos.remove(inq)
-            print('Cadastro excluido com sucesso!!!')
+            print('Cadastro excluído com sucesso!!!')
             sleep(2)
             system('cls')
             break
     else:
         system('cls')
-        print('OPÇÃO INVALIDA, TENTA NOVAMENTE.')
+        print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE.')
         sleep(3)
         system('cls')        
 
@@ -59,7 +59,7 @@ def alterar_inquilino():
 
     listar_inquilino()
 
-    print('Digite o ID que deseja atualizar')
+    print('Digite o ID que deseja atualizar.')
     opcao = input('=> ')
     
     for inq in lista_inquilinos:
@@ -68,17 +68,17 @@ def alterar_inquilino():
             novo_nome = input('Digite nome: ')
             inq['Nome'] = novo_nome
             novo_cpf = input('Digite CPF: ')
-            inq['CpF'] = novo_cpf
+            inq['CPF'] = novo_cpf
             novo_data_nascimento = input('Digite data nascimento: ')
             inq['Data de nascimento'] = novo_data_nascimento
 
-        print('\nCadastro atualizado com sucesso!!!')
-        sleep(2)
-        system('cls')
-        break
+            print('\nCadastro atualizado com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
 
     else:
         system('cls')
-        print('\nOPCÃO INVALIDA, TENTA NOVAMENTE.')
+        print('\nOPCÃO INVÁLIDA, TENTA NOVAMENTE.')
         sleep(3)
         system('cls')

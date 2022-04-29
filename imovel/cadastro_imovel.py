@@ -49,17 +49,44 @@ def excluir_imovel():
         
         if imov['ID'] == int(opcao):
             lista_imovel.remove(imov)
-            print('Cadastro excluido com sucesso!!!')
+            print('Cadastro excluído com sucesso!!!')
             sleep(2)
             system('cls')
             break
     else:
         system('cls')
-        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        print('OPÇÃO INVÁLIDA, TENTA NOVAMENTE')
         sleep(3)
         system('cls') 
 
-# Falta desenvolver essa função
 def alterar_imovel():
-    pass
     
+    listar_imovel()
+
+    print('Digite o ID que deseja atualizar.')
+    opcao = input('=> ')
+    
+    for imov in lista_imovel:
+
+        if imov['ID'] == int(opcao):
+            novo_logradouro = input('Digite logradouro: ')
+            imov['Logradouro'] = novo_logradouro
+            novo_cep = input('Digite CEP: ')
+            imov['Cep'] = novo_cep
+            novo_bairro = input('Digite bairro: ')
+            imov['Bairro'] = novo_bairro
+            novo_cidade = input('Digite cidade: ')
+            imov['Cidade'] = novo_cidade
+            novo_proprietario = input('Digite proprietario: ')
+            imov['Proprietário'] = novo_proprietario
+
+            print('\nCadastro atualizado com sucesso!!!')
+            sleep(2)
+            system('cls')
+            break
+
+    else:
+        system('cls')
+        print('\nOPCÃO INVÁLIDA, TENTA NOVAMENTE.')
+        sleep(3)
+        system('cls')
