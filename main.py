@@ -65,25 +65,25 @@ def main():
 
             if opcao == '1':
                 system('cls')
-                print('BASE DE INQUILINOS CADASTRADOS')
+                print('BASE DE INQUILINOS CADASTRADOS.')
                 print('-' * 32)  
                 listar_inquilino()
             
             elif opcao =='2':
                 system('cls')
-                print('BASE DE IMÓVEIS CADASTRADOS')
+                print('BASE DE IMÓVEIS CADASTRADOS.')
                 print('-' * 25)  
                 listar_imovel()
 
             elif opcao =='3':
                 system('cls')
-                print('BASE DE PROPRIETÁRIOS CADASTRADOS')
+                print('BASE DE PROPRIETÁRIOS CADASTRADOS.')
                 print('-' * 33)  
                 listar_proprietario()
             
             elif opcao =='4':
                 system('cls')
-                print('BASE DE ALUGUÉIS CADASTRADOS')
+                print('BASE DE ALUGUÉIS CADASTRADOS.')
                 print('-' * 33)  
                 listar_aluguel()
             
@@ -93,7 +93,6 @@ def main():
                 sleep(3)
                 system('cls')
 
-        # EM CONSTRUÇÃO       
         elif opcao == '3':
             system('cls')
             menu.cabecalho()
@@ -104,15 +103,24 @@ def main():
             opcao = input('=> ')
 
             if opcao == '1':
+                print('BASE DE INQUILINOS CADASTRADOS.')
+                print('-' * 32) 
                 alterar_inquilino()
 
             elif opcao == '2':
+                print('BASE DE IMÓVEIS CADASTRADOS.')
+                print('-' * 25) 
                 alterar_imovel()
 
             elif opcao =='3':
+
+                print('BASE DE ALUGUÉIS CADASTRADOS.')
+                print('-' * 33)  
                 alterar_proprietario()
 
             elif opcao =='4':
+                print('BASE DE ALUGUÉIS CADASTRADOS.')
+                print('-' * 33) 
                 alterar_aluguel()
 
             else:
@@ -131,15 +139,19 @@ def main():
             opcao = input('=> ')
 
             if opcao == '1':
+                system('cls')
                 excluir_inquilino()
 
             elif opcao == '2':
+                system('cls')
                 excluir_imovel()
 
             elif opcao =='3':
+                system('cls')
                 excluir_proprietario()
 
             elif opcao =='4':
+                system('cls')
                 excluir_aluguel()
 
             else:
@@ -154,9 +166,9 @@ def main():
 
         else:
             system('cls')
-            print('OPÇÃO INVALIDA, TENTA NOVAMENTE!!!')
+            print('OPÇÃO INVALIDA, TENTE NOVAMENTE!!!')
             sleep(3)
             system('cls')  
-        
+            
 if __name__ == '__main__':
     main()

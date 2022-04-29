@@ -19,8 +19,8 @@ def cadastro_inquilino():
 
     registro_inquilino = {
         'ID': id_inicial,
-        'CPF': cpf,
         'Nome': nome,
+        'CPF': cpf,
         'Data de nascimento': data_nascimento
     }
     
@@ -38,7 +38,7 @@ def excluir_inquilino():
   
     listar_inquilino()
 
-    print('Digite o ID que deseja excluir')
+    print('Digite o ID que deseja excluir.')
     opcao = input('=> ')
     
     for inq in lista_inquilinos:
@@ -51,10 +51,34 @@ def excluir_inquilino():
             break
     else:
         system('cls')
-        print('OPÇÃO INVALIDA, TENTA NOVAMENTE')
+        print('OPÇÃO INVALIDA, TENTA NOVAMENTE.')
         sleep(3)
         system('cls')        
 
-# Falta desenvolver essa função
 def alterar_inquilino():
-    pass
+
+    listar_inquilino()
+
+    print('Digite o ID que deseja atualizar')
+    opcao = input('=> ')
+    
+    for inq in lista_inquilinos:
+
+        if inq['ID'] == int(opcao):
+            novo_nome = input('Digite nome: ')
+            inq['Nome'] = novo_nome
+            novo_cpf = input('Digite CPF: ')
+            inq['CpF'] = novo_cpf
+            novo_data_nascimento = input('Digite data nascimento: ')
+            inq['Data de nascimento'] = novo_data_nascimento
+
+        print('\nCadastro atualizado com sucesso!!!')
+        sleep(2)
+        system('cls')
+        break
+
+    else:
+        system('cls')
+        print('\nOPCÃO INVALIDA, TENTA NOVAMENTE.')
+        sleep(3)
+        system('cls')
